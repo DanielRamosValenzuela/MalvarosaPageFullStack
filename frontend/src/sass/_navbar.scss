@@ -1,0 +1,108 @@
+.heading {
+  padding-top: 7rem;
+  width: 95%;
+  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+
+  span {
+    font-size: 2rem;
+    padding: 1rem 6rem;
+    color: black;
+    background: $thirdColor;
+    border-top-right-radius: 3rem;
+    display: inline-block;
+  }
+}
+
+header .header-1,
+header .header-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .header-1 {
+  .logo {
+    font-size: 2rem;
+    color: #666;
+  }
+  .form-container form {
+    display: flex;
+
+    #search {
+      height: 4rem;
+      width: 50rem;
+      outline: none;
+      border: 0.2rem solid #666;
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    #search:focus {
+      border-color: $thirdColor;
+    }
+
+    label {
+      height: 4rem;
+      width: 5rem;
+      text-align: center;
+      line-height: 4rem;
+      font-size: 2rem;
+      cursor: pointer;
+      background: $thirdColor;
+      color: $primaryColor;
+      &:hover {
+        color: $secondaryColor;
+      }
+    }
+  }
+}
+
+header .header-2 {
+  background: $thirdColor;
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+      margin: 0 1rem;
+
+      a {
+        font-size: 2rem;
+        color: $primaryColor;
+      }
+    }
+  }
+  .icons a {
+    color: $primaryColor;
+    font-size: 2rem;
+    padding: 0 1rem;
+
+    &:hover {
+      color: $secondaryColor;
+    }
+  }
+  #menu {
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+header .header-2 .navbar ul li a.active,
+header .header-2 .navbar ul li a:hover {
+  color: $secondaryColor;
+}
+
+header .header-2.header-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
